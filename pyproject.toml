@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oalp"
+version = "0.1.0"
+description = "Open Agent Logging Protocol: git for AI agent decisions."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Shaik Nayeem Ahmed" }]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.2"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+oalp = "oalp.cli:main"
+oalp-mcp = "oalp.mcp_server:main"
+
+[project.urls]
+Homepage = "https://github.com/shaiknayeem2001/oalp"
+
+[tool.setuptools.packages.find]
+where = ["src"]
